@@ -34,18 +34,6 @@ function App() {
     }
   };
 
-  // const renderTableData = () => {
-  //   const startIndex = (currentPage - 1) * 10;
-  //   const endIndex = Math.min(startIndex + 10, data.length);
-  //   return data.slice(startIndex, endIndex).map((item, index) => (
-  //     <tr key={startIndex + index}>
-  //       <td>{item.id}</td>
-  //       <td>{item.name}</td>
-  //       {/* Add more table columns if needed */}
-  //     </tr>
-  //   ));
-  // };
-
   const renderTableData = () => {
     const startIndex = (currentPage - 1) * 10;
     const endIndex = Math.min(startIndex + 10, data.length);
@@ -55,11 +43,9 @@ function App() {
         <td>{item.name}</td>
         <td>{item.email}</td>
         <td>{item.role}</td>
-        {/* Add more table columns if needed */}
       </tr>
     ));
   };
-  
 
   return (
     <div className="App">
@@ -70,7 +56,6 @@ function App() {
             <th>Name</th>
             <th>Email</th>
             <th>Role</th>
-            {/* Add more table headers if needed */}
           </tr>
         </thead>
         <tbody>{renderTableData()}</tbody>
