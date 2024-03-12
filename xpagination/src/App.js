@@ -5,17 +5,11 @@ function App() {
   const [data, setData] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
 
-  // useEffect(() => {
-  //   fetchData();
-  // }, [currentPage]);
+  
   useEffect(() => {
     fetchData();
-  }, [currentPage, data]); // Add data as a dependency
-  
-  useEffect(() => {
-    console.log("Data updated:", data);
-  }, [data]);
-  
+  }, [currentPage, data]);
+
 
   const fetchData = async () => {
     try {
