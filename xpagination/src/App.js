@@ -67,7 +67,7 @@ function App() {
         <button onClick={handlePreviousPage} disabled={currentPage === 1}>
           Previous
         </button>
-        <span>Page {currentPage}</span>
+        <span>  Page{currentPage} </span>
         <button onClick={handleNextPage} disabled={currentPage === Math.ceil(data.length / 10)}>
           Next
         </button>
